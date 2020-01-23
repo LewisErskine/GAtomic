@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:Conversion="urn:Conversion" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35BEA006-7D4C-4E9C-B8D0-8C7838E123F2}</ProjectGuid>
+    <RootNamespace>GAtomic</RootNamespace>
+    <AssemblyName>GAtomic</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>GLDoors2.GAtomic.Form1</StartupObject>
+    <NoConfig>false</NoConfig>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <OutputPath>bin\</OutputPath>
+    <DebugType>Full</DebugType>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\WINNT\Microsoft.NET\Framework\v1.1.4322\System.dll</HintPath>
+      <Private />
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>C:\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Data.dll</HintPath>
+      <Private />
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Drawing.dll</HintPath>
+      <Private />
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\WINNT\Microsoft.NET\Framework\v1.1.4322\System.Windows.Forms.dll</HintPath>
+      <Private />
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\WINNT\Microsoft.NET\Framework\v1.1.4322\System.XML.dll</HintPath>
+      <Private />
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Form1.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GAtomicBrick.cs" />
+    <Compile Include="GAtomicChoiceForm.cs" />
+    <EmbeddedResource Include="GAtomicChoiceForm.resx">
+      <DependentUpon>GAtomicChoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GAtomicConfiguration.cs" />
+    <Compile Include="GAtomicConnectionElement.cs" />
+    <Compile Include="GAtomicDirectionArrow.cs" />
+    <Compile Include="GAtomicElementObject.cs" />
+    <Compile Include="GAtomicElementObjectInvalidException.cs" />
+    <Compile Include="GAtomicFileOperations.cs" />
+    <Compile Include="GAtomicFormulaEditorForm.cs" />
+    <EmbeddedResource Include="GAtomicFormulaEditorForm.resx">
+      <DependentUpon>GAtomicFormulaEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GAtomicGameEditorForm.cs" />
+    <EmbeddedResource Include="GAtomicGameEditorForm.resx">
+      <DependentUpon>GAtomicGameEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GAtomicLoadFormulaForm.cs" />
+    <EmbeddedResource Include="GAtomicLoadFormulaForm.resx">
+      <DependentUpon>GAtomicLoadFormulaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GAtomicNewGameForm.cs" />
+    <EmbeddedResource Include="GAtomicNewGameForm.resx">
+      <DependentUpon>GAtomicNewGameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GAtomicObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>
